@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B303D898299793DB0082D3B0 /* CoreGPX in Frameworks */ = {isa = PBXBuildFile; productRef = B303D897299793DB0082D3B0 /* CoreGPX */; };
+		B303D89B299793F50082D3B0 /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = B303D89A299793F50082D3B0 /* SwiftCSV */; };
 		B3D6371C29978E5700561F0B /* GeoTrack_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6371B29978E5700561F0B /* GeoTrack_ManagerApp.swift */; };
 		B3D6371E29978E5700561F0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D6371D29978E5700561F0B /* ContentView.swift */; };
 		B3D6372029978E5800561F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D6371F29978E5800561F0B /* Assets.xcassets */; };
@@ -18,7 +20,7 @@
 /* Begin PBXFileReference section */
 		B3D6371829978E5700561F0B /* GeoTrack Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeoTrack Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D6371B29978E5700561F0B /* GeoTrack_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoTrack_ManagerApp.swift; sourceTree = "<group>"; };
-		B3D6371D29978E5700561F0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B3D6371D29978E5700561F0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		B3D6371F29978E5800561F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D6372229978E5800561F0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3D6372429978E5800561F0B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B303D898299793DB0082D3B0 /* CoreGPX in Frameworks */,
+				B303D89B299793F50082D3B0 /* SwiftCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +47,7 @@
 				B3D6371929978E5700561F0B /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		B3D6371929978E5700561F0B /* Products */ = {
 			isa = PBXGroup;
@@ -89,6 +94,10 @@
 			dependencies = (
 			);
 			name = "GeoTrack Manager";
+			packageProductDependencies = (
+				B303D897299793DB0082D3B0 /* CoreGPX */,
+				B303D89A299793F50082D3B0 /* SwiftCSV */,
+			);
 			productName = "GeoTrack Manager";
 			productReference = B3D6371829978E5700561F0B /* GeoTrack Manager.app */;
 			productType = "com.apple.product-type.application";
@@ -100,8 +109,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = GT;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
+				ORGANIZATIONNAME = wyw;
 				TargetAttributes = {
 					B3D6371729978E5700561F0B = {
 						CreatedOnToolsVersion = 14.2;
@@ -117,6 +128,10 @@
 				Base,
 			);
 			mainGroup = B3D6370F29978E5700561F0B;
+			packageReferences = (
+				B303D896299793DB0082D3B0 /* XCRemoteSwiftPackageReference "CoreGPX" */,
+				B303D899299793F50082D3B0 /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+			);
 			productRefGroup = B3D6371929978E5700561F0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -353,6 +368,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B303D896299793DB0082D3B0 /* XCRemoteSwiftPackageReference "CoreGPX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vincentneo/CoreGPX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+		B303D899299793F50082D3B0 /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B303D897299793DB0082D3B0 /* CoreGPX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B303D896299793DB0082D3B0 /* XCRemoteSwiftPackageReference "CoreGPX" */;
+			productName = CoreGPX;
+		};
+		B303D89A299793F50082D3B0 /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B303D899299793F50082D3B0 /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B3D6372629978E5800561F0B /* GeoTrack_Manager.xcdatamodeld */ = {

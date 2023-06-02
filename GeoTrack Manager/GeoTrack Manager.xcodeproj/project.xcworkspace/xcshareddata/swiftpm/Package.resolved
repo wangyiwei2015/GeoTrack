@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "coregpx",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vincentneo/CoreGPX",
+      "state" : {
+        "revision" : "90dea5dea799e2b3684f5c72f07141d8516ce80b",
+        "version" : "0.9.2"
+      }
+    },
+    {
+      "identity" : "swiftcsv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftcsv/SwiftCSV",
+      "state" : {
+        "revision" : "96fa14b92e88e0befdbc8bc31c7c2c9594a30060",
+        "version" : "0.8.1"
+      }
+    }
+  ],
+  "version" : 2
+}
