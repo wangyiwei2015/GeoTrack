@@ -1,0 +1,9 @@
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+# source 'https://cdn.cocoapods.org'
+platform :ios, '15.0'
+
+target 'GeoTrack Manager' do
+  use_frameworks!
+  pod 'AMap2DMap-NO-IDFA'
+  pod 'AMapLocation-NO-IDFA'
+end
